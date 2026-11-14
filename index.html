@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEEL DINO RUN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+        <!-- ГЛАВНОЕ МЕНЮ -->
+        <div id="main-menu" class="menu-screen">
+            <h1 class="menu-title">STEEL DINO RUN</h1>
+            <div class="menu-content">
+                <div class="menu-buttons">
+                    <button id="btn-start" class="menu-btn btn-play">ИГРАТЬ</button>
+                    <button id="btn-char" class="menu-btn btn-secondary">СКИНЫ</button>
+                    <button id="btn-maps" class="menu-btn btn-secondary btn-maps-custom">ВЫБОР КАРТЫ</button>
+                    <button id="btn-credits" class="menu-btn btn-secondary">CREDITS</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ОКНО ВЫБОРА СКИНОВ -->
+        <div id="skins-modal" class="modal-overlay hidden">
+            <div class="modal-card">
+                <h2>ВЫБЕРИТЕ СКИН</h2>
+                <div class="skins-grid">
+                    <div class="skin-item active" data-skin="dino">
+                        <div class="skin-preview johnny-preview"></div>
+                        <span>JOHNNY JOESTAR</span>
+                    </div>
+                    <div class="skin-item" data-skin="gyro">
+                        <div class="skin-preview gyro-preview"></div>
+                        <span>GYRO RUN</span>
+                    </div>
+                    <div class="skin-item" data-skin="diego">
+                        <div class="skin-preview diego-preview"></div>
+                        <span>SCARY MONSTERS</span>
+                    </div>
+                    <div class="skin-item" data-skin="john">
+                        <div class="skin-preview john-preview"></div>
+                        <span>JOHN ROD</span>
+                    </div>
+                    <div class="skin-item" data-skin="hotpants">
+                        <div class="skin-preview hotpants-preview"></div>
+                        <span>HOT PANTS</span>
+                    </div>
+                </div>
+                <button id="btn-close-skins" class="menu-btn btn-secondary modal-close-btn">ЗАКРЫТЬ</button>
+            </div>
+        </div>
+
+        <!-- ОКНО ВЫБОРА КАРТ -->
+        <div id="maps-modal" class="modal-overlay hidden">
+            <div class="modal-card modal-card-medium">
+                <h2>ВЫБЕРИТЕ ЛОКАЦИЮ ГОНКИ</h2>
+                <div class="maps-grid">
+                    <div class="map-item active" data-map="devils">
+                        <div class="map-icon" style="background: #dfa465;">🌵</div>
+                        <span>ЛАДОНЬ ДЬЯВОЛА</span>
+                    </div>
+                    <div class="map-item" data-map="sandiego">
+                        <div class="map-icon" style="background: #48dbfb;">🌊</div>
+                        <span>ПЛЯЖ САН-ДИЕГО</span>
+                    </div>
+                    <div class="map-item" data-map="rocky">
+                        <div class="map-icon" style="background: #7f8c8d;">❄️</div>
+                        <span>СКАЛИСТЫЕ ГОРЫ</span>
+                    </div>
+                </div>
+                <button id="btn-close-maps" class="menu-btn btn-secondary modal-close-btn">ЗАКРЫТЬ</button>
+            </div>
+        </div>
+
+        <!-- ОКНО CREDITS -->
+        <div id="credits-modal" class="modal-overlay hidden">
+            <div class="modal-card modal-card-small">
+                <h2>CREDITS</h2>
+                <div class="credits-list">
+                    <p><strong>АВТОРЫ ИГРЫ:</strong></p>
+                    <p class="credits-authors">Чухин Дмитрий<br>Липеев Матвей</p>
+                    <p class="credits-group">Группа П-341К</p>
+                </div>
+                <button id="btn-close-credits" class="menu-btn btn-secondary modal-close-btn">ЗАКРЫТЬ</button>
+            </div>
+        </div>
+
+        <!-- ИГРОВОЙ ЭКРАН -->
+        <div id="game-screen" class="hidden">
+            <canvas id="gameCanvas" width="800" height="250"></canvas>
+            <div class="game-controls-hint">
+                <span>Прыжок: <b>ПРОБЕЛ</b> / <b>↑</b> / <b>КЛИК</b></span>
+                <button id="btn-back-menu" class="btn-mini">В МЕНЮ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
